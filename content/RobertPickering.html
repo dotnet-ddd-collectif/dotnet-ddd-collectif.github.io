@@ -1,0 +1,107 @@
+<html>
+  <head>
+
+        <script type="text/javascript">
+          var wsUri = "ws://localhost:8080/websocket";
+      function init()
+      {
+        websocket = new WebSocket(wsUri);
+        websocket.onclose = function(evt) { onClose(evt) };
+      }
+      function onClose(evt)
+      {
+        console.log('closing');
+        websocket.close();
+        document.location.reload();
+      }
+      window.addEventListener("load", init, false);
+      </script>
+            <meta charSet="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>
+      .Net DDD Collectif
+    </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/style/style.css"/>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img src="/images/bulma.png" alt="Logo"/>
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+          <a class="navbar-item" href="/">
+            Home
+          </a>
+          <a class="navbar-item" href="/contact.html">
+            Contact
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section class="hero is-info is-medium is-bold">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">
+            .Net DDD Collectif
+          </h1>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <section class="articles">
+        <div class="column is-8 is-offset-2">
+          <div class="card article">
+            <div class="card-content">
+              <div class="media-content has-text-centered">
+                <p class="title article-title">
+                  <a href="/content/RobertPickering.html">
+                    Robert Pickering
+                  </a>
+                </p>
+                <p class="subtitle is-6 article-subtitle">
+                  <p>
+                    <img src="/images/RobertPickering.jpeg"/>
+                  </p>
+                  <p>
+                    LinkedIn
+                    <a href="https://linkedin.com/in/robertpickering">
+                      in/robertpickering
+                    </a>
+                  </p>
+                  <p>
+                    GitHub
+                    <a href="https://github.com/robertpi">
+                      robertpi
+                    </a>
+                  </p>
+                  <p>
+                    Twitter
+                    <a href="https://twitter.com/robertpi">
+                      robertpi
+                    </a>
+                  </p>
+                </p>
+              </div>
+              <div class="content article-body">
+                <p>Robert est un ingénieur logiciel expérimenté, responsable du développement et auteur technique publié. Son travail a souvent consisté à assurer le bon fonctionnement des plateformes logicielles. Cela l'a amené à croire que les opérations et la maintenance sont une considération importante de l'architecture logicielle. Il pense que l'architecture logicielle doit être aussi simple que possible, mais pas plus simple. Il croit que les langages fonctionnels donnent les meilleurs résultats lors du développement de systèmes logiciels car ils donnent au développeur les outils pour décomposer des systèmes complexes en pièces plus simples. Sa croyance en la programmation fonctionnelle l'a amené à passer beaucoup de temps à promouvoir le langage F # en écrivant à ce sujet et en prenant la parole lors de conférences. La dernière édition de son livre «Beginning F #» a été publiée par Apress en 2016.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
